@@ -78,7 +78,7 @@ function nextLevel() {
         if (i === winningIndex) {
             apple.dataset.winning = "true";
             apple.innerHTML = "<img src='images/good-apple.png' alt='Apple' onerror='this.onerror=null; this.src=\"images/fallback-good-apple.png\"' />";
-        } else {
+            apple.classList.add("good-apple");  // Optional: special class for good apple
             apple.innerHTML = "<img src='images/bad-apple.png' alt='Bad Apple' onerror='this.onerror=null; this.src=\"images/fallback-bad-apple.png\"' />";
             apple.classList.add("bad-apple");  // Optional: special class for bad apples
         }
